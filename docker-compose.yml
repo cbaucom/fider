@@ -1,5 +1,12 @@
 version: "3"
 services:
+  app:
+    ports:
+      - "80:80"
+      - "443:3000"
+    environment:
+      HOST_DOMAIN: feedback.totym.com
+      SSL_AUTO: "true"
   smtp:
     image: mailhog/mailhog:latest
     restart: always
